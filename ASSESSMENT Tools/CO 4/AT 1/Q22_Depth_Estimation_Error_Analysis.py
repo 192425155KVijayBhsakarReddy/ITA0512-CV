@@ -1,0 +1,27 @@
+import matplotlib.pyplot as plt
+methods = ["Method A", "Method B", "Method C"]
+errors = [0.5, 1.2, 0.8]
+print("=" * 55)
+print("Q22 - DEPTH ESTIMATION ERROR ANALYSIS")
+print("=" * 55)
+for method, error in zip(methods, errors):
+    print(f"{method:<15} Error: {error:.1f} m")
+best_index = errors.index(min(errors))
+worst_index = errors.index(max(errors))
+print("\nPerformance Evaluation")
+print("-" * 55)
+print(f"Most Accurate Method : {methods[best_index]}")
+print(f"Lowest Error         : {errors[best_index]:.1f} m")
+print(f"Highest Error        : {errors[worst_index]:.1f} m")
+print(f"Error Difference     : {errors[worst_index] - errors[best_index]:.1f} m")
+print("\nConclusion")
+print(f"{methods[best_index]} is the best method because it has the lowest")
+print("depth estimation error and therefore provides the highest accuracy.")
+plt.figure(figsize=(8, 5))
+bars = plt.bar(methods, errors)
+plt.title("Depth Estimation Error Comparison")
+plt.xlabel("Method")
+plt.ylabel("Error (m)")
+plt.grid(axis="y")
+plt.tight_layout()
+plt.show()
