@@ -1,0 +1,6 @@
+Metric / Pipeline,Traditional CV (OpenCV + SVM),Deep Learning (MobileNetV2)
+Accuracy,73.33%,66.67%
+Precision,81.82%,61.90%
+Recall,60.00%,86.67%
+F1-Score,69.23%,72.22%
+Avg Latency per Image,103.23 ms,21.32 ms
